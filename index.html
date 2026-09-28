@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkyNow - Weather</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">SkyNow</div>
+    <form class="search" id="form">
+      <input type="text" id="cityInput" placeholder="Search city (e.g. Karachi)" autocomplete="off" spellcheck="false" aria-label="City name">
+      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button type="button" id="locBtn" aria-label="Use my location" title="Use my location"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8"/></svg></button>
+    </form>
+  </header>
+
+  <main class="wrap">
+    <p class="msg" id="msg" role="status">Search a city to see the weather.</p>
+
+    <section class="current" id="current" hidden>
+      <div class="main">
+        <div class="icon" id="icon"></div>
+        <div>
+          <h1 class="temp" id="temp"></h1>
+          <h2 class="city" id="city"></h2>
+          <p class="desc" id="desc"></p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><span>Humidity</span><p id="humidity"></p></div>
+        <div class="stat"><span>Wind speed</span><p id="wind"></p></div>
+        <div class="stat"><span>Feels like</span><p id="feels"></p></div>
+        <div class="stat"><span>Pressure</span><p id="pressure"></p></div>
+      </div>
+    </section>
+
+    <section class="forecast" id="forecast" hidden>
+      <h3>5-day forecast</h3>
+      <div class="days" id="days"></div>
+    </section>
+
+    <div class="recent" id="recent"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

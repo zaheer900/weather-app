@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+:root { --g1: #47e6b1; --g2: #6a6a9e; --field: #ebfffc; }
+body { min-height: 100vh; color: #fff; background: linear-gradient(135deg, var(--g1), var(--g2)) fixed; }
+
+.top { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding: 24px 5%; }
+.brand { font-size: 26px; font-weight: 600; }
+.search { display: flex; gap: 10px; flex: 1; max-width: 520px; }
+.search input { flex: 1; min-width: 0; height: 52px; padding: 0 22px; border: 0; border-radius: 26px; background: var(--field); color: #444; font-size: 16px; }
+.search button { width: 52px; height: 52px; border: 0; border-radius: 50%; background: var(--field); cursor: pointer; display: grid; place-items: center; }
+.search svg { width: 20px; height: 20px; stroke: #444; fill: none; stroke-width: 2; stroke-linecap: round; }
+.search input:focus-visible, .search button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 10px 5% 60px; }
+.msg { text-align: center; margin: 40px 0; font-size: 18px; }
+[hidden] { display: none !important; }
+
+.current { background: rgba(0,0,0,.18); border-radius: 24px; padding: 32px; }
+.main { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; justify-content: center; }
+.icon { width: 150px; height: 150px; }
+.temp { font-size: 76px; font-weight: 500; line-height: 1; }
+.city { font-size: 38px; font-weight: 400; }
+.desc { font-size: 18px; font-weight: 300; opacity: .9; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 30px; }
+.stat { background: rgba(255,255,255,.14); border-radius: 16px; padding: 16px 18px; }
+.stat span { font-size: 14px; font-weight: 300; }
+.stat p { font-size: 24px; font-weight: 500; }
+
+.forecast { margin-top: 28px; }
+.forecast h3 { font-weight: 500; margin-bottom: 14px; }
+.days { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }
+.day { background: rgba(0,0,0,.18); border-radius: 18px; padding: 16px 10px; text-align: center; }
+.day b { display: block; font-weight: 500; }
+.day svg { width: 56px; height: 56px; margin: 8px 0; }
+.day small { font-weight: 300; display: block; opacity: .9; }
+
+.recent { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; justify-content: center; }
+.recent button { border: 0; border-radius: 20px; padding: 8px 16px; background: rgba(255,255,255,.2); color: #fff; cursor: pointer; font-size: 14px; }
+.recent button:hover, .recent button:focus-visible { background: rgba(255,255,255,.35); outline: none; }
+
+@media (max-width: 520px) { .temp { font-size: 60px; } .city { font-size: 30px; } .current { padding: 22px; } }
